@@ -8,17 +8,22 @@
 
 #include <stdio.h>
 
+//in C, you need to prototype your variable before using it
 int addTwoVar();
+
 int main(int argc, const char * argv[])
 {
+    //fill in your desired values for your variables
     int x = 10;
     int y = 9;
-    int sum = addTwoVar(x, y);
     
-    printf("The sum of x and y is: %d\n", sum);
+    //pass two arugments only to addTwoVar or it won't work
+    printf("The sum of x and y is: %d\n", addTwoVar(x, y));
+    
     return 0;
 }
 
+//create a function with two parameters
 int addTwoVar(int firstNum, int secondNum){
     int sum = firstNum + secondNum;
     return sum;

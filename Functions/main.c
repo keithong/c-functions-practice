@@ -8,11 +8,18 @@
 
 #include <stdio.h>
 
+int addTwoVar();
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
-    printf("This is a practice of functions in C!\n");
+    int x = 10;
+    int y = 9;
+    int sum = addTwoVar(x, y);
+    
+    printf("The sum of x and y is: %d\n", sum);
     return 0;
 }
 
+int addTwoVar(int firstNum, int secondNum){
+    int sum = firstNum + secondNum;
+    return sum;
+}
